@@ -1,5 +1,6 @@
 import jieba
 import os
+import matplotlib.pyplot as plt
 
 # 读取中文停词
 stop_file = 'cn_stopwords.txt'
@@ -30,7 +31,6 @@ items = list(counts.items())
 items.sort(key=lambda x: x[1], reverse=True)
 sort_list = sorted(counts.values(), reverse=True)
 
-import matplotlib.pyplot as plt
 
 plt.title('Zipf-Law',fontsize=18)  #标题
 plt.xlabel('rank',fontsize=18)     #排名
